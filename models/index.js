@@ -14,7 +14,7 @@ const sequelize = config.use_env_variable
   : new Sequelize(config.database, config.username, config.password, config);
 
 // 📌 Importar manualmente cada modelo
-const models = ["User", "Post", "Like", "Comment"];
+const models = ["user", "post", "like", "comment"];
 
 models.forEach((modelName) => {
   const model = require(`./${modelName}`)(sequelize, DataTypes);
